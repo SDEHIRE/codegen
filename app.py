@@ -2,13 +2,12 @@ import ast
 import random
 from flask import Flask, request, jsonify
 import os
+from flask_cors import CORS  # Import CORS requirements
+
 app = Flask(__name__)
 
-
-from flask_cors import CORS  # Import CORS
-
-
-CORS(app) 
+# Enable CORS for all routes
+CORS(app)
 
 class EnhancedQuestionGenerator:
     def __init__(self):
