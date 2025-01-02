@@ -4,6 +4,12 @@ from flask import Flask, request, jsonify
 import os
 app = Flask(__name__)
 
+
+from flask_cors import CORS  # Import CORS
+
+
+CORS(app) 
+
 class EnhancedQuestionGenerator:
     def __init__(self):
         """
